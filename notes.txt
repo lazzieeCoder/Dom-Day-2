@@ -1,0 +1,59 @@
+Get methods
+Query selectors
+Window (prompt,alert)
+settimeout vs setinterval
+
+Get Methods:-
+tagname , classname , id 
+array ,  array  , exact element
+
+getElementById:-
+=> this method is applicable only if you have id attribute in HTML element.
+=> It return html element 
+=> if no element on id name it returns null
+getElementByClassName:-
+=> this method is applicable only if you have class attribute in HTML element.
+=> It return array.
+getElementByTagName:-
+=> this method is applicable only if you have Tag in HTML element.
+=> It return array.
+Query selector
+=> It will return only the first occurence of an html element
+Query selector All
+=> It will return all the occurence of the tag in an array.
+
+session task
+b50wd2tamil@gmail.com => valid user || invalid user
+
+example :- Age calculator
+//Age calculator
+function calculateAge(){
+    const dob = new Date(document.getElementById("dob").value);
+    const today = new Date();
+
+   if(isNaN(dob.getTime())){
+   document.getElementById("output").innerHTML="Please Enter a Valid Date";
+    return ;
+   }
+
+ let age = today.getFullYear()- dob.getFullYear();
+ const monthDiff = today.getMonth() - dob.getMonth(); 
+
+ if(monthDiff <0 || (monthDiff ===0 && today.getDate() < dob.getDate()))
+{
+    age--;
+}
+document.getElementById("output").innerHTML="You are"+ age + "Years Old.";
+}
+
+ <div class="container">
+    <h1>Age Calculator</h1>
+    <div class="input-section">
+        <label for="dob">Enter your Date of Birth</label>
+        <input type="date" id="dob">
+        <button onclick="calculateAge()">Calculate</button>
+    </div>
+    <div class="output-section">
+        <p id="output"></p>
+    </div>
+  </div>
