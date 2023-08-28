@@ -57,3 +57,20 @@ document.getElementById("output").innerHTML="You are"+ age + "Years Old.";
         <p id="output"></p>
     </div>
   </div>
+
+  //session task
+  1.firstname
+  2.lastname
+  3.phonenumber
+  4.email
+  --------------------
+  Window 
+  => It is a global object
+  => Inside this only we have document
+  
+  function helloAll(){
+    console.log("Hello")
+  }
+setInterval(helloAll,1000)
+
+clearTimeout()
